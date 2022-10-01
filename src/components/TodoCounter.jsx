@@ -7,6 +7,10 @@ import { IoMdCreate, IoMdPerson } from "react-icons/io";
 import "../styles/TodoCounter.style.css";
 
 const TodoCounter = ({total, completed}) => {
+  const HandlerClickConfig = () =>{
+    alert('Configure')
+  }
+
   return (
     <div className="contianer-tittle">
       <div className="tittle">
@@ -24,7 +28,7 @@ const TodoCounter = ({total, completed}) => {
             <p>J
             </p>
       </div>
-      <div className="perfil-edit">
+      <div onClick={HandlerClickConfig} className="perfil-edit">
         <IoMdCreate/>
       </div>
       </div>
