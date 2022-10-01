@@ -1,0 +1,31 @@
+.input-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    position: relative;
+}
+input {
+    width: 90%;
+    border-radius: 20px;
+    min-height: 35px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background: var(--darck-bg-color);
+    color: var(--main-bg-color);
+    outline: none;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.178);
+    transition: all .8s;
+    font-size: medium;
+}
+input:focus{
+    border: 1px solid var(--second-bg-color);
+}
+.input-search svg{
+    position: absolute;
+    right: 40px;
+    font-size: larger;
+    color: var(--text-bg-dark-color);
+    cursor: text;
+}

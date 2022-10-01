@@ -1,0 +1,102 @@
+li{
+    margin: 25px 0px;
+  
+}
+.container-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    align-items: center;
+    color: white;
+
+}
+.container-items .completed {
+    background: fixed;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--second-bg-color-hover);
+    cursor: pointer;
+    color: var(--second-bg-color-hover);
+    opacity: 0.6;
+    transition: all ease .5s;
+}
+.container-items .completed svg{
+    font-size: 1.5rem;
+    margin: 5px;
+  
+}
+.container-items .completed:hover{
+    background: var(--second-bg-color-hover);
+    color: var(--text-bg-light-color);
+    opacity: 1;
+}
+.container-items .completed-active{
+    background: var(--second-bg-color-hover);
+    color: var(--text-bg-light-color);
+    opacity: 1;
+}
+.container-tasks {
+    font-size: large;
+    color: var(--text-bg-light-color);
+    width: 100%;
+    white-space: initial;
+    overflow: hidden;
+    position: relative;
+}
+.container-tasks .parrafo-active {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.container-tasks hr {
+    margin: 2px 0px 0px 0px;
+    opacity: 0.2;
+}
+.container-tasks label{
+    font-size: small;
+    color: var(--text-bg-dark-color);
+    float: right;
+    display: flex;
+    
+}
+.container-tasks .favoritebtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    margin-left: 8px;
+    color: var(--darck-bg-color);
+    scale: 1;
+    transition: all ease .5s;
+   
+}
+.container-tasks .favoritebtn:hover {
+    color: var(--second-bg-color);
+    opacity: 1;
+    scale: 1.1;
+}
+
+.favoritebtn-active svg{
+    color: var(--second-bg-color);
+    scale: 1.1;
+    
+}
+
+.container-items_options{  
+    display: flex;
+}
+.container-items_options button{
+    background: fixed;
+    border: none;
+    margin: 0px 5px;
+    font-size: x-large;
+    color: var(--second-bg-color-hover);
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+.container-items_options button:hover {
+    opacity: 1;
+    
+}

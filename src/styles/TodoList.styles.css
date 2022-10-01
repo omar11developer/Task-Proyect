@@ -1,0 +1,99 @@
+.taks-container{
+    width: 90%;
+    margin: 0 auto;
+    background: var(--darck-bg-color);
+    border-radius: 8px;
+    position: relative;
+}
+.taks-info{
+    display: flex;
+    padding: 10px 8px;
+    width: 100%;
+    background: var(--main-dark-color);
+    border-radius: 8px 8px 0px 0px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 4px 8px #000;
+    position: absolute;
+    z-index: 10;
+}
+.taks-info_description p{
+    display: flex;
+    align-items: center;
+    color: var(--main-bg-color);
+    font-size: large;
+}
+.taks-info_description p svg{
+    margin-right: 10px;
+}
+.taks-info-options{
+    display: flex;
+    align-items: center;
+}
+.taks-info-options p{
+    color: var(--text-bg-dark-color);
+    font-size: xx-small;
+}
+.taks-info-options button{
+    max-width: 70px;
+    border: none;
+    background: none;
+    color: var(--second-bg-color-hover);
+    cursor: pointer;
+    margin: 2px;
+}
+
+.taks-info-options button svg{
+    font-size: x-large;
+}
+.taks-info-options button:hover{
+    color: var(--second-bg-color);
+}
+.active {
+    color: var(--second-bg-color);
+}
+.taks-info-options_favorite{
+    position: relative;
+}
+.taks-info-options_favorite div{
+    background: var(--main-dark-color);
+    border: 1px solid var(--darck-bg-color);
+    padding: 2px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 13px;
+    top: -8px;
+    font-size: small;
+    opacity: 0.8;
+
+}
+.tks-info-options_complete{
+    position: relative;
+}
+.tks-info-options_complete div{
+    background: var(--main-dark-color);
+    border: 1px solid var(--darck-bg-color);
+    padding: 2px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 13px;
+    top: -8px;
+    font-size: small;
+    opacity: 0.8;
+}
+.taks{
+    padding: 80px 20px 10px 20px;
+    height: 500px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
+}
+.taks ul{
+    list-style: none;
+}
