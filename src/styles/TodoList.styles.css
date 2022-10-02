@@ -92,8 +92,19 @@
     height: 500px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    
 }
+.taks::-webkit-scrollbar{
+    width: 8px;
+}
+.taks::-webkit-scrollbar-track{
+    background: none;
+}
+.taks::-webkit-scrollbar-thumb{
+    background-color: var(--second-bg-color-hover);
+    border-radius: 20px;
+    border: 1px solid var(--second-bg-color-hover);
+}
+
 .taks ul{
     list-style: none;
 }

@@ -5,14 +5,28 @@ import { useState } from "react";
 import NotFoundImg from './img/notFound.svg'
 
 //Data Array
-import { Tacks } from "./data/Tacks";
+
 import AppUI from "./components/AppUI";
 
 
 function App() {
-  const [todos, setTodos] = useState(Tacks);
+  //PERSITENCIA OF DATA
+  
+  const localStorageTodos = localStorage.getItem('TASK_V1');
+  let parsedTodos;
+  if (!localStorageTodos) {
+    localStorage.setItem('TASK_V1',JSON.stringify([]));
+    parsedTodos=[];
+  } else {
+    parsedTodos=JSON.parse(localStorageTodos);
+  }
+  const saveTodos= (newTodos) => {
+    const stringiffiedTodos = JSON.stringify(newTodos);
+    localStorage.setItem('TASK_V1', stringiffiedTodos);
+    setTodos(newTodos);
+  }
   const [search, setSearch] = useState('');
- 
+  const [todos, setTodos] = useState(parsedTodos);
 
   const todoCompleted = todos.filter((todo) => !!todo.completed).length;
   const todoFavorite = todos.filter((todo) => !!todo.favorite).length;
@@ -35,19 +49,19 @@ function App() {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos= [...todos];
     newTodos[todoIndex].completed = true;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   const favoriteTodo = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos= [...todos];
     newTodos[todoIndex].favorite=true;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   const deleteTodo = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   
   return (

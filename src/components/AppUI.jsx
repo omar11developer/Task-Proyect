@@ -27,7 +27,7 @@ const AppUI = ({
       <TodoSearch search={search} setSearch={setSearch} />
       <TodoList todoCompleted={todoCompleted} todoFavorite={todoFavorite}>
         {searchedTodos.length === 0 ? (
-          <NotFound message="It was not found" img={NotFoundImg} />
+          <NotFound message="There is no task" img={NotFoundImg} />
         ) : (
           searchedTodos.map((todo) => (
             <TodoItems
